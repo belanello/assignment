@@ -1,36 +1,34 @@
 #!/usr/bin/env bash
 # File:guessinggame.sh
 
-make README.md
-
 function readme {
-	echo "Title: Guessing Game" > README.md
+	make README.md
 	echo "Date: $(date)" >> README.md
-	echo "Number of lines in script: $(cat guessinggame.sh | wc -l )" >> README.md
 }
+
 readme
 
 answer=0
 actual=$(ls | wc -l)
 while [[ ! $answer -eq $actual ]]
 do
-	echo "How many files do you have in your current directory? >>"
+	echo "HOW MANY FILES DO YOU HAVE IN YOUR DIRECTORY? >>"
 	read answer
 
 	if [[ $answer =~ [0-9] ]]
 	then
 		if [[ $answer -gt $actual ]]
 		then
-			echo "Your answer is too high"
+			echo "YOUR ANSWER IS TOO HIGH."
 		elif [[ $answer -lt $actual ]]
 		then
-			echo "Your answer is too low"
+			echo "YOUR ANSWER IS TOO LOW."
 		elif [[ $answer -eq $actual ]]
 		then 
-			echo "Congratulation! Your answer is correct"
+			echo "CONGRATULATION! YOUR ANSWER IS CORRECT."
 		fi
 	else
-		echo "Wrong entry. Pls enter integer number."
+		echo "WRONG ENTRY. PLS ENTER THE INTEGER NUMBER."
 	fi
 done
  
