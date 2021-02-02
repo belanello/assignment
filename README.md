@@ -1,3 +1,6 @@
-Title: Guessing Game
-Number of lines in script: 
-Date: Tue Feb  2 23:18:29 JST 2021
+Title:
+Guessing Game
+Number of lines in script:
+33
+Date:
+Wed Feb  3 00:10:18 JST 2021

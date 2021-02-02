@@ -3,9 +3,7 @@
 
 function readme {
 	make README.md
-	echo "Date: $(date)" >> README.md
 }
-
 readme
 
 answer=0
